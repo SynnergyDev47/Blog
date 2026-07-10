@@ -97,7 +97,7 @@ agregarán cuando el proyecto avance a las fases correspondientes en `blog-synne
 
 ## Autor
 
-**Aurelio** — Programador y asesor de marketing digital. Fundador de [Synnergy Lab](#),
+**Aurelio** — Programador y asesor de marketing digital. Fundador de [Synnergy Lab](https://synnergydev47.github.io/SynnergyDev47/es/),
 agencia enfocada en estrategia, automatización y servicios creativos.
 
 Actualmente trabajando en:
