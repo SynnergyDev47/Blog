@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto · Synnergy Blog</title>
+</head>
+
+<body>
+
+  <!-- CONCEPTO: header como cabecera de página -->
+  <header>
+    <h1>Contacto</h1>
+    <!-- CONCEPTO: nav con lista de enlaces de navegación -->
+    <nav>
+      <p><a href="index.html">&larr; Inicio</a></p>
+    </nav>
+  </header>
+
+  <!-- CONCEPTO: main como contenedor del contenido principal -->
+  <main>
+    <p>¿Tienes una propuesta, pregunta o quieres colaborar?
+      Completa el formulario.</p>
+
+    <!-- CONCEPTO: form con action="#" y method="get" -->
+    <form action="#" method="get">
+
+      <!-- CONCEPTO: fieldset y legend agrupando campos -->
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <!-- CONCEPTO: label correctamente asociado con for="" a su input -->
+        <!-- CONCEPTO: input type="text" con placeholder y maxlength -->
+        <!-- CONCEPTO: required en al menos 3 campos -->
+        <p>
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre"
+            placeholder="Tu nombre y apellido"
+            maxlength="80" required>
+        </p>
+
+        <!-- CONCEPTO: input type="email" con required -->
+        <p>
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </p>
+
+        <!-- CONCEPTO: input type="tel" con pattern -->
+        <!-- CONCEPTO: pattern en al menos 1 campo -->
+        <p>
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono"
+            pattern="[+]?[0-9]{7,15}">
+        </p>
+
+        <!-- CONCEPTO: input type="url" -->
+        <p>
+          <label for="sitio">Sitio web o portfolio</label>
+          <input type="url" id="sitio" name="sitio">
+        </p>
+
+        <!-- CONCEPTO: input type="date" -->
+        <p>
+          <label for="fecha-contacto">Fecha preferida de contacto</label>
+          <input type="date" id="fecha-contacto" name="fecha-contacto">
+        </p>
+      </fieldset>
+
+      <!-- CONCEPTO: fieldset y legend agrupando campos -->
+      <fieldset>
+        <legend>Tipo de consulta</legend>
+
+        <!-- CONCEPTO: input type="radio" en grupo con mismo name -->
+        <p>
+          <input type="radio" id="tipo-desarrollo" name="tipo" value="desarrollo">
+          <label for="tipo-desarrollo">Desarrollo web</label>
+        </p>
+        <p>
+          <input type="radio" id="tipo-marketing" name="tipo" value="marketing">
+          <label for="tipo-marketing">Asesoría de marketing</label>
+        </p>
+        <p>
+          <input type="radio" id="tipo-contenido" name="tipo" value="contenido">
+          <label for="tipo-contenido">Colaboración en contenido</label>
+        </p>
+        <p>
+          <input type="radio" id="tipo-otro" name="tipo" value="otro">
+          <label for="tipo-otro">Otro</label>
+        </p>
+      </fieldset>
+
+      <!-- CONCEPTO: fieldset y legend agrupando campos -->
+      <fieldset>
+        <legend>Sobre el proyecto</legend>
+
+        <!-- CONCEPTO: select con option y optgroup -->
+        <p>
+          <label for="etapa">¿En qué etapa está tu proyecto?</label>
+          <select id="etapa" name="etapa">
+            <optgroup label="Inicio">
+              <option value="idea">Idea</option>
+              <option value="prototipo">Prototipo</option>
+            </optgroup>
+            <optgroup label="Crecimiento">
+              <option value="lanzado">Lanzado</option>
+              <option value="escalando">Escalando</option>
+            </optgroup>
+          </select>
+        </p>
+
+        <!-- CONCEPTO: datalist con option asociado a input mediante list="" -->
+        <p>
+          <label for="origen">¿Cómo encontraste el blog?</label>
+          <input type="text" id="origen" name="origen" list="origenes">
+          <datalist id="origenes">
+            <option value="Google">
+            <option value="Instagram">
+            <option value="LinkedIn">
+            <option value="Recomendación">
+            <option value="Otro">
+          </datalist>
+        </p>
+
+        <!-- CONCEPTO: input type="number" con min y max -->
+        <!-- CONCEPTO: min y max en campo numérico o de rango -->
+        <p>
+          <label for="presupuesto">Presupuesto aproximado (USD)</label>
+          <input type="number" id="presupuesto" name="presupuesto"
+            min="0" max="100000">
+        </p>
+
+        <!-- CONCEPTO: input type="range" con min, max y value -->
+        <p>
+          <label for="urgencia">Urgencia del proyecto (1-10)</label>
+          <input type="range" id="urgencia" name="urgencia"
+            min="1" max="10" value="5">
+        </p>
+
+        <!-- CONCEPTO: textarea con rows y cols -->
+        <p>
+          <label for="descripcion">Describe tu proyecto</label>
+          <textarea id="descripcion" name="descripcion"
+            rows="5" cols="50" maxlength="1000"></textarea>
+        </p>
+      </fieldset>
+
+      <!-- CONCEPTO: fieldset y legend agrupando campos -->
+      <fieldset>
+        <legend>Preferencias y archivos</legend>
+
+        <!-- CONCEPTO: input type="checkbox" -->
+        <p>
+          <input type="checkbox" id="acepta-emails" name="acepta-emails" required>
+          <label for="acepta-emails">Acepto recibir emails sobre el blog</label>
+        </p>
+        <p>
+          <input type="checkbox" id="acepta-privacidad" name="acepta-privacidad" required>
+          <label for="acepta-privacidad">Acepto la política de privacidad</label>
+        </p>
+
+        <!-- CONCEPTO: input type="file" con accept -->
+        <p>
+          <label for="brief">Adjuntar brief o documento</label>
+          <input type="file" id="brief" name="brief"
+            accept=".pdf,.doc,.docx">
+        </p>
+
+        <!-- CONCEPTO: input type="color" -->
+        <p>
+          <label for="color-propuesta">Color preferido para la propuesta visual</label>
+          <input type="color" id="color-propuesta" name="color-propuesta">
+        </p>
+
+        <!-- CONCEPTO: input type="search" -->
+        <p>
+          <label for="palabra-clave">¿Alguna palabra clave del servicio que buscas?</label>
+          <input type="search" id="palabra-clave" name="palabra-clave">
+        </p>
+
+        <!-- CONCEPTO: input type="password" con minlength -->
+        <p>
+          <label for="pin">Crea un PIN de acceso al seguimiento (4 dígitos)</label>
+          <input type="password" id="pin" name="pin"
+            minlength="4" maxlength="4" pattern="[0-9]{4}">
+        </p>
+      </fieldset>
+
+      <!-- CONCEPTO: button type="submit" -->
+      <button type="submit">Enviar consulta</button>
+      <!-- CONCEPTO: button type="reset" -->
+      <button type="reset">Limpiar formulario</button>
+
+    </form>
+  </main>
+
+  <!-- CONCEPTO: footer como pie de página -->
+  <footer>
+    <hr>
+    <p>© 2026 Aurelio &amp; Synnergy Lab</p>
+  </footer>
+</body>
+
+</html>

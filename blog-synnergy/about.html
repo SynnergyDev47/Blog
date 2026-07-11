@@ -11,121 +11,197 @@
 <body>
   <!-- CONCEPTO: DOCTYPE, html, head, body — estructura base -->
 
-  <!-- ============================== -->
-  <!-- 1. ENCABEZADO                  -->
-  <!-- ============================== -->
-  <!-- CONCEPTO: headings h1 y h2, atributo id -->
-  <h1 id="perfil">Aurelio Crespo</h1>
-  <!-- CONCEPTO: entidad &amp; en texto -->
-  <h2>Programador &amp; Asesor de Marketing Digital</h2>
+  <!-- CONCEPTO: header como cabecera de página -->
+  <header>
+    <!-- CONCEPTO: headings h1 y h2, atributo id -->
+    <h1 id="perfil">Aurelio Crespo</h1>
+    <!-- CONCEPTO: entidad &amp; en texto -->
+    <h2>Programador &amp; Asesor de Marketing Digital</h2>
+  </header>
 
-  <!-- ============================== -->
-  <!-- 2. FOTO DE PERFIL              -->
-  <!-- ============================== -->
-  <!-- CONCEPTO: atributo alt, width, height en img -->
-  <!-- CONCEPTO: elemento block p como contenedor -->
-  <p>
-    <img src="images/perfil.jpg" alt="Foto de perfil de Aurelio Crespo" width="200" height="200"
-      title="Aurelio Crespo — Synnergy Lab">
-  </p>
+  <!-- CONCEPTO: nav con lista de enlaces de navegación -->
+  <nav>
+    <!-- CONCEPTO: ruta relativa -->
+    <p><a href="index.html">&larr; Volver al inicio</a></p>
+  </nav>
 
-  <!-- ============================== -->
-  <!-- 3. BIO                         -->
-  <!-- ============================== -->
-  <!-- CONCEPTO: elementos inline strong y em -->
-  <!-- CONCEPTO: párrafo p con texto real -->
-  <p>Soy Aurelio (también, conocido como Synnergy Dev), programador y asesor de marketing digital. Fundador de
-    <strong>Synnergy Lab</strong>, un espacio donde combino desarrollo web
-    y estrategia comercial. Me apasiona la <em>inteligencia artificial</em>
-    y su potencial para transformar negocios.
-  </p>
-  <p>Escribo sobre software, hardware e inteligencia artificial. Mi objetivo
-    es compartir herramientas y reflexiones que ayuden a otros profesionales
-    a crecer en el mundo digital.</p>
+  <!-- CONCEPTO: main como contenedor del contenido principal -->
+  <main>
 
-  <!-- ============================== -->
-  <!-- 4. HABILIDADES                 -->
-  <!-- ============================== -->
-  <!-- CONCEPTO: ul, li, atributo class -->
-  <h3>Habilidades principales</h3>
-  <ul class="habilidades">
-    <li>Desarrollo web (HTML, CSS, JavaScript)</li>
-    <li>Estrategia de marketing digital</li>
-    <li>Inteligencia artificial aplicada</li>
-    <li>Edición de foto y video</li>
-    <li>Gestión de proyectos</li>
-  </ul>
+    <!-- ============================== -->
+    <!-- 2. FOTO DE PERFIL              -->
+    <!-- ============================== -->
+    <!-- CONCEPTO: atributo alt, width, height en img -->
+    <!-- CONCEPTO: elemento block p como contenedor -->
+    <p>
+      <img src="images/perfil.jpg" alt="Foto de perfil de Aurelio Crespo" width="200" height="200"
+        title="Aurelio Crespo — Synnergy Lab">
+    </p>
 
-  <!-- ============================== -->
-  <!-- 5. TRAYECTORIA                 -->
-  <!-- ============================== -->
-  <!-- CONCEPTO: ol, li, abbr -->
-  <h3>Trayectoria</h3>
-  <ol>
-    <li>2023 — Comencé a estudiar desarrollo web y herramientas de
-      <abbr title="Inteligencia Artificial">IA</abbr> de forma autodidacta.
-    </li>
-    <li>2025 — Fundé Synnergy Lab como estudio de marketing digital y desarrollo.</li>
-    <li>2026 — Lancé mis primeros proyectos de automatización con inteligencia
-      artificial aplicada a negocios locales.</li>
-  </ol>
+    <!-- ============================== -->
+    <!-- 3. BIO                         -->
+    <!-- ============================== -->
+    <!-- CONCEPTO: elementos inline strong y em -->
+    <!-- CONCEPTO: párrafo p con texto real -->
+    <p>Soy Aurelio (también, conocido como Synnergy Dev), programador y asesor de marketing digital. Fundador de
+      <strong>Synnergy Lab</strong>, un espacio donde combino desarrollo web
+      y estrategia comercial. Me apasiona la <em>inteligencia artificial</em>
+      y su potencial para transformar negocios.
+    </p>
+    <p>Escribo sobre software, hardware e inteligencia artificial. Mi objetivo
+      es compartir herramientas y reflexiones que ayuden a otros profesionales
+      a crecer en el mundo digital.</p>
 
-  <!-- ============================== -->
-  <!-- 6. GLOSARIO RÁPIDO             -->
-  <!-- ============================== -->
-  <!-- CONCEPTO: dl, dt, dd -->
-  <h3>Términos que uso</h3>
-  <dl>
-    <dt>Neurocopywriting</dt>
-    <dd>Técnica de redacción persuasiva basada en principios de neurociencia
-      aplicada al marketing.</dd>
-    <dt>SaMD</dt>
-    <dd>Software as a Medical Device — software que cumple una función médica
-      por sí mismo, sin depender de hardware específico.</dd>
-    <dt>Automatización</dt>
-    <dd>Uso de herramientas y scripts para ejecutar tareas repetitivas sin
-      intervención manual.</dd>
-  </dl>
+    <!-- ============================== -->
+    <!-- 4. HABILIDADES                 -->
+    <!-- ============================== -->
+    <!-- CONCEPTO: ul, li, atributo class -->
+    <h3>Habilidades principales</h3>
+    <ul class="habilidades">
+      <li>Desarrollo web (HTML, CSS, JavaScript)</li>
+      <li>Estrategia de marketing digital</li>
+      <li>Inteligencia artificial aplicada</li>
+      <li>Edición de foto y video</li>
+      <li>Gestión de proyectos</li>
+    </ul>
 
-  <!-- ============================== -->
-  <!-- 7. DEMO DE CÓDIGO INLINE       -->
-  <!-- ============================== -->
-  <!-- CONCEPTO: entidades lt y gt, elemento code -->
-  <h4>Sobre este sitio</h4>
-  <p>Este blog está escrito en <code>&lt;HTML&gt;</code> puro, sin frameworks.</p>
+    <!-- ============================== -->
+    <!-- STACK DE HERRAMIENTAS (tabla)   -->
+    <!-- ============================== -->
+    <!-- CONCEPTO: table con estructura completa -->
+    <h3>Stack de herramientas</h3>
+    <table>
+      <!-- CONCEPTO: caption describiendo la tabla -->
+      <caption>Herramientas organizadas por categoría</caption>
+      <!-- CONCEPTO: thead — encabezado de tabla -->
+      <thead>
+        <tr>
+          <!-- CONCEPTO: th con scope="col" -->
+          <th scope="col">Categoría</th>
+          <th scope="col">Herramienta</th>
+          <th scope="col">Uso principal</th>
+        </tr>
+      </thead>
+      <!-- CONCEPTO: tbody — cuerpo de tabla -->
+      <tbody>
+        <tr>
+          <!-- CONCEPTO: th con scope="row" -->
+          <th scope="row">Desarrollo</th>
+          <td>Antigravity</td>
+          <td>Editor principal</td>
+        </tr>
+        <tr>
+          <th scope="row">Desarrollo</th>
+          <td>GitHub</td>
+          <td>Control de versiones</td>
+        </tr>
+        <tr>
+          <th scope="row">IA</th>
+          <td>Claude</td>
+          <td>Asistente y automatización</td>
+        </tr>
+        <tr>
+          <th scope="row">IA</th>
+          <td>NotebookLM</td>
+          <td>Investigación</td>
+        </tr>
+        <tr>
+          <th scope="row">Marketing</th>
+          <td>MailerLite</td>
+          <td>Email marketing</td>
+        </tr>
+        <tr>
+          <th scope="row">Marketing</th>
+          <td>Make</td>
+          <td>Automatización de flujos</td>
+        </tr>
+      </tbody>
+      <!-- CONCEPTO: tfoot — pie de tabla -->
+      <tfoot>
+        <tr>
+          <!-- CONCEPTO: td con colspan -->
+          <td colspan="3">Stack actualizado a 2026</td>
+        </tr>
+      </tfoot>
+    </table>
 
-  <!-- ============================== -->
-  <!-- 8. DEMO DE STYLE INLINE        -->
-  <!-- ============================== -->
-  <!-- CONCEPTO: atributo style inline (uso educativo) -->
-  <!-- CONCEPTO: entidad &nbsp; para separación -->
-  <p style="font-weight: bold;">Contacto:&nbsp;aurelio@synnergy.lab</p>
+    <!-- ============================== -->
+    <!-- 5. TRAYECTORIA                 -->
+    <!-- ============================== -->
+    <!-- CONCEPTO: ol, li, abbr -->
+    <h3>Trayectoria</h3>
+    <ol>
+      <li>2023 &mdash; Comencé a estudiar desarrollo web y herramientas de
+        <abbr title="Inteligencia Artificial">IA</abbr> de forma autodidacta.
+      </li>
+      <li>2025 &mdash; Fundé Synnergy Lab como estudio de marketing digital y desarrollo.</li>
+      <li>2026 &mdash; Lancé mis primeros proyectos de automatización con inteligencia
+        artificial aplicada a negocios locales.</li>
+    </ol>
 
-  <!-- ============================== -->
-  <!-- 9. LINKS A REDES               -->
-  <!-- ============================== -->
-  <!-- CONCEPTO: rutas absolutas en href -->
-  <h3>Encuéntrame en</h3>
-  <ul>
-    <li><a href="https://github.com/SynnergyDev47" title="Perfil de Aurelio Crespo en GitHub">GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/aurelio-crespo/" title="Perfil de Aurelio Crespo en LinkedIn">LinkedIn</a>
-    </li>
-    <li><a href="https://www.instagram.com/synnergy_dev/" title="Perfil de Aurelio Crespo en Instagram">Instagram</a>
-    </li>
-  </ul>
+    <!-- ============================== -->
+    <!-- 6. GLOSARIO RAPIDO             -->
+    <!-- ============================== -->
+    <!-- CONCEPTO: dl, dt, dd -->
+    <h3>Términos que uso</h3>
+    <dl>
+      <dt>Neurocopywriting</dt>
+      <dd>Técnica de redacción persuasiva basada en principios de neurociencia
+        aplicada al marketing.</dd>
+      <dt>SaMD</dt>
+      <dd>Software as a Medical Device — software que cumple una función médica
+        por sí mismo, sin depender de hardware específico.</dd>
+      <dt>Automatización</dt>
+      <dd>Uso de herramientas y scripts para ejecutar tareas repetitivas sin
+        intervención manual.</dd>
+    </dl>
 
-  <!-- ============================== -->
-  <!-- 10. NAVEGACIÓN                 -->
-  <!-- ============================== -->
-  <!-- CONCEPTO: ruta relativa -->
-  <p><a href="index.html">← Volver al inicio</a></p>
+    <!-- ============================== -->
+    <!-- 7. DEMO DE CODIGO INLINE       -->
+    <!-- ============================== -->
+    <!-- CONCEPTO: entidades lt y gt, elemento code -->
+    <h4>Sobre este sitio</h4>
+    <p>Este blog está escrito en <code>&lt;HTML&gt;</code> puro, sin frameworks.</p>
 
-  <!-- ============================== -->
-  <!-- 11. PIE                        -->
-  <!-- ============================== -->
-  <hr>
-  <!-- CONCEPTO: entidad &amp; en footer -->
-  <p>© 2026 Aurelio Crespo &amp; Synnergy Lab</p>
+    <!-- ============================== -->
+    <!-- 8. CONTACTO                    -->
+    <!-- ============================== -->
+    <!-- CONCEPTO: entidad &nbsp; para separación -->
+    <p><strong>Contacto:</strong>&nbsp;synnergydev@gmail.com</p>
+
+    <!-- ============================== -->
+    <!-- 9. LINKS A REDES               -->
+    <!-- ============================== -->
+    <!-- CONCEPTO: rutas absolutas en href -->
+    <h3>Encuéntrame en</h3>
+    <ul>
+      <li><a href="https://github.com/SynnergyDev47" title="Perfil de Aurelio Crespo en GitHub">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/aurelio-crespo/"
+          title="Perfil de Aurelio Crespo en LinkedIn">LinkedIn</a>
+      </li>
+      <li><a href="https://www.instagram.com/synnergy_dev/" title="Perfil de Aurelio Crespo en Instagram">Instagram</a>
+      </li>
+    </ul>
+
+  </main>
+
+  <!-- CONCEPTO: aside con contenido complementario -->
+  <aside>
+    <h3>Actualmente trabajando en:</h3>
+    <ul>
+      <li>Synnergy Lab como agencia de marketing digital y desarrollo</li>
+      <li>Serie de ebooks sobre marketing digital</li>
+      <li>Plataforma de matching influencers-marcas</li>
+      <li>Plataforma de reclutamiento de artistas musicales</li>
+    </ul>
+  </aside>
+
+  <!-- CONCEPTO: footer como pie de página -->
+  <footer>
+    <hr>
+    <!-- CONCEPTO: entidad &amp; en footer -->
+    <p>© 2026 Aurelio Crespo &amp; Synnergy Lab</p>
+  </footer>
 </body>
 
 </html>

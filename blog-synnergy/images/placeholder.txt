@@ -1,0 +1,1 @@
+Coloca aquí: perfil.jpg, arm-chip-large.jpg, arm-chip-small.jpg, arm-chip-fallback.jpg, video-poster.jpg

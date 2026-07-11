@@ -10,24 +10,46 @@
 
 <body>
   <!-- CONCEPTO: DOCTYPE, html, head, body — estructura base -->
-  <!-- CONCEPTO: atributo id en elemento -->
-  <h1 id="inicio">Synnergy Blog</h1>
-  <p>
-    <a href="index.html">Inicio</a>
-    <!-- CONCEPTO: atributo title en enlace -->
-    <a href="about.html" title="Ir a la página sobre mí">Sobre mí</a>
-  </p>
-  <p>Tecnología, software, hardware e IA para programadores.</p>
-  <hr>
-  <!-- CONCEPTO: entidades HTML -->
-  <p>Este blog cubre HTML, CSS &amp; JavaScript. Aprende a usar etiquetas
-    como &lt;head&gt;, &lt;body&gt; y más. Separador:&nbsp;|</p>
-  <h2>Artículos recientes</h2>
-  <ul>
-    <li><a href="articles/mi-primer-articulo.html">Bienvenido a Synnergy Blog</a></li>
-  </ul>
-  <hr>
-  <p>© 2026 Aurelio Crespo · Synnergy Lab</p>
+
+  <!-- CONCEPTO: header como cabecera de página -->
+  <header>
+    <!-- CONCEPTO: atributo id en elemento -->
+    <h1 id="inicio">Synnergy Blog</h1>
+    <p>Tecnología, software, hardware e IA para programadores.</p>
+  </header>
+
+  <!-- CONCEPTO: nav con lista de enlaces de navegación -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <!-- CONCEPTO: atributo title en enlace -->
+      <li><a href="about.html" title="Ir a la página sobre mí">Sobre mí</a></li>
+      <li><a href="articles/arm-arquitectura.html">Artículos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONCEPTO: main como contenedor del contenido principal -->
+  <main>
+    <!-- CONCEPTO: entidades HTML -->
+    <p>Este blog cubre HTML, CSS &amp; JavaScript. Aprende a usar etiquetas
+      como &lt;head&gt;, &lt;body&gt; y más. Separador:&nbsp;|</p>
+
+    <!-- CONCEPTO: section agrupando contenido temático -->
+    <section>
+      <h2>Artículos recientes</h2>
+      <ul>
+        <li><a href="articles/mi-primer-articulo.html">Bienvenido a Synnergy Blog</a></li>
+        <li><a href="articles/arm-arquitectura.html">ARM vs x86: el chip que cambió mi forma de trabajar</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- CONCEPTO: footer como pie de página -->
+  <footer>
+    <hr>
+    <p>© 2026 Aurelio Crespo · Synnergy Lab</p>
+  </footer>
 </body>
 
 </html>

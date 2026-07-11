@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARM vs x86 · Synnergy Blog</title>
+</head>
+
+<body>
+
+  <!-- CONCEPTO: header como cabecera de página -->
+  <header>
+    <h1>ARM vs x86: el chip que cambió mi forma de trabajar</h1>
+    <p>Publicado el 11 de julio de 2026</p>
+    <!-- CONCEPTO: nav con lista de enlaces de navegación -->
+    <nav>
+      <p><a href="../index.html">&larr; Inicio</a></p>
+    </nav>
+  </header>
+
+  <!-- CONCEPTO: main como contenedor del contenido principal -->
+  <main>
+    <!-- CONCEPTO: article como pieza de contenido independiente -->
+    <article>
+      <h2>Resumen del artículo</h2>
+      <p>Comparativa práctica entre ARM y x86 desde la experiencia diaria de
+        un developer y marketer digital en Cuba.</p>
+
+      <!-- CONCEPTO: section agrupando contenido temático -->
+      <section>
+        <h2>Dos arquitecturas, una decisión</h2>
+        <p>Durante años asumí que un portátil para desarrollo web y marketing
+          digital debía llevar un procesador Intel o AMD. ARM era territorio de
+          móviles y tablets. Eso cambió cuando probé un Snapdragon X en tareas
+          reales: editar código, correr contenedores, procesar audio y trabajar
+          con modelos de IA local. La diferencia no está solo en benchmarks, sino
+          en cómo cada arquitectura gestiona energía, compatibilidad y flujo de
+          trabajo diario.</p>
+
+        <!-- CONCEPTO: picture con al menos dos source y img de fallback -->
+        <picture>
+          <source srcset="../images/arm-chip-large.jpg" media="(min-width: 800px)">
+          <source srcset="../images/arm-chip-small.jpg" media="(max-width: 799px)">
+          <img src="../images/arm-chip-fallback.jpg"
+            alt="Chip ARM Snapdragon X sobre placa base"
+            width="600" height="350">
+        </picture>
+      </section>
+
+      <!-- CONCEPTO: section agrupando contenido temático -->
+      <section>
+        <h2>Comparativa técnica</h2>
+        <p>Esta tabla resume lo que he observado tras meses de uso mixto entre
+          una Lenovo IdeaPad Slim 3X (ARM) y equipos x86 de referencia en
+          proyectos de desarrollo y automatización de marketing.</p>
+
+        <!-- CONCEPTO: table con estructura completa -->
+        <table>
+          <!-- CONCEPTO: caption describiendo la tabla -->
+          <caption>ARM vs x86 — Comparativa por categoría</caption>
+          <!-- CONCEPTO: thead — encabezado de tabla -->
+          <thead>
+            <tr>
+              <!-- CONCEPTO: th con scope="col" -->
+              <th scope="col">Categoría</th>
+              <th scope="col">ARM (Snapdragon X)</th>
+              <th scope="col">x86 (Intel Core Ultra)</th>
+            </tr>
+          </thead>
+          <!-- CONCEPTO: tbody — cuerpo de tabla -->
+          <tbody>
+            <tr>
+              <th scope="row">Consumo energético</th>
+              <td>Muy bajo</td>
+              <td>Moderado</td>
+            </tr>
+            <tr>
+              <th scope="row">Rendimiento en IA</th>
+              <td>Nativo (NPU)</td>
+              <td>Dependiente de GPU</td>
+            </tr>
+            <tr>
+              <th scope="row">Compatibilidad de software</th>
+              <td>En expansión</td>
+              <td>Amplia</td>
+            </tr>
+            <tr>
+              <!-- CONCEPTO: td con rowspan -->
+              <td rowspan="2">Ecosistema</td>
+              <td>Windows on ARM</td>
+              <td>Windows x64</td>
+            </tr>
+            <tr>
+              <td>Linux ARM</td>
+              <td>Linux x86</td>
+            </tr>
+            <tr>
+              <th scope="row">Precio por rendimiento</th>
+              <td>Alto</td>
+              <td>Variable</td>
+            </tr>
+          </tbody>
+          <!-- CONCEPTO: tfoot — pie de tabla -->
+          <tfoot>
+            <tr>
+              <!-- CONCEPTO: td con colspan -->
+              <td colspan="3">
+                Datos basados en uso real de desarrollo web y marketing, 2026.
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <!-- CONCEPTO: section agrupando contenido temático -->
+      <section>
+        <h2>En video</h2>
+        <p>Grabé una demo corta mostrando tiempos de arranque, compilación de
+          un proyecto estático y ejecución de un modelo de IA ligero en el
+          Snapdragon X frente a un portátil x86 equivalente.</p>
+
+        <!-- CONCEPTO: figure conteniendo un elemento visual -->
+        <figure>
+          <!-- CONCEPTO: video con controls, width y poster -->
+          <video controls width="600" poster="../images/video-poster.jpg">
+            <source src="../media/arm-demo.mp4" type="video/mp4">
+            <!-- CONCEPTO: track dentro de video con kind="subtitles" -->
+            <track kind="subtitles"
+              src="../media/arm-demo.vtt"
+              srclang="es"
+              label="Español">
+            Tu navegador no soporta el elemento video.
+          </video>
+          <!-- CONCEPTO: figcaption describiendo el figure -->
+          <figcaption>
+            Demo de rendimiento del Snapdragon X en tareas de desarrollo
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- CONCEPTO: section agrupando contenido temático -->
+      <section>
+        <h2>Episodio del podcast</h2>
+        <p>En el primer episodio del podcast de Synnergy Lab profundizo en por
+          qué ARM está redefiniendo el hardware personal y qué implica para
+          developers y marketers que trabajan desde Cuba con recursos limitados.</p>
+
+        <!-- CONCEPTO: figure conteniendo un elemento visual -->
+        <figure>
+          <!-- CONCEPTO: audio con controls -->
+          <audio controls>
+            <source src="../media/episodio-arm.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento audio.
+          </audio>
+          <!-- CONCEPTO: figcaption describiendo el figure -->
+          <figcaption>
+            Episodio 01 — ARM, el futuro del hardware personal
+          </figcaption>
+        </figure>
+      </section>
+
+    </article>
+
+    <!-- CONCEPTO: aside con contenido complementario -->
+    <aside>
+      <h3>Sobre el autor</h3>
+      <p>Aurelio escribe sobre tecnología desde Cuba.
+        Trabaja a diario con una Lenovo IdeaPad Slim 3X
+        con Snapdragon X.</p>
+      <h3>Artículos relacionados</h3>
+      <ul>
+        <li><a href="mi-primer-articulo.html">
+          Bienvenido a Synnergy Blog</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- CONCEPTO: footer como pie de página -->
+  <footer>
+    <hr>
+    <p>© 2026 Aurelio &amp; Synnergy Lab</p>
+  </footer>
+</body>
+
+</html>
