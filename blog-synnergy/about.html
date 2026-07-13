@@ -5,14 +5,52 @@
   <!-- CONCEPTO: meta charset y meta viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre mí · Synnergy Blog</title>
+  <!-- CONCEPTO: title descriptivo y único -->
+  <title>Aurelio Crespo · Programador y asesor de marketing digital</title>
+  <!-- CONCEPTO: meta description -->
+  <meta name="description" content="Perfil de Aurelio Crespo, fundador de Synnergy Lab, programador y asesor de marketing digital especializado en IA, software y automatización.">
+  <!-- CONCEPTO: canonical -->
+  <link rel="canonical" href="https://synnergylab.com/blog-synnergy/about.html">
+  <!-- CONCEPTO: robots index follow -->
+  <meta name="robots" content="index, follow">
+  <!-- CONCEPTO: hreflang es -->
+  <link rel="alternate" hreflang="es" href="https://synnergylab.com/blog-synnergy/about.html">
+  <!-- CONCEPTO: Open Graph -->
+  <meta property="og:title" content="Aurelio Crespo · Programador y asesor de marketing digital">
+  <meta property="og:description" content="Perfil de Aurelio Crespo, fundador de Synnergy Lab, programador y asesor de marketing digital especializado en IA, software y automatización.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://synnergylab.com/blog-synnergy/about.html">
+  <meta property="og:image" content="https://synnergylab.com/blog-synnergy/images/perfil.jpg">
+  <!-- CONCEPTO: Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aurelio Crespo · Programador y asesor de marketing digital">
+  <meta name="twitter:description" content="Perfil de Aurelio Crespo, fundador de Synnergy Lab, programador y asesor de marketing digital especializado en IA, software y automatización.">
+  <meta name="twitter:image" content="https://synnergylab.com/blog-synnergy/images/perfil.jpg">
+  <!-- CONCEPTO: stylesheet media print no bloqueante -->
+  <link rel="stylesheet" media="print" href="css/print.css">
+  <!-- CONCEPTO: Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aurelio Crespo",
+    "jobTitle": "Programador y asesor de marketing digital",
+    "url": "https://synnergylab.com/blog-synnergy/about.html",
+    "sameAs": [
+      "https://github.com/SynnergyDev47",
+      "https://www.linkedin.com/in/aurelio-crespo/",
+      "https://www.instagram.com/synnergy_dev/"
+    ]
+  }
+  </script>
 </head>
 
 <body>
   <!-- CONCEPTO: DOCTYPE, html, head, body — estructura base -->
 
   <!-- CONCEPTO: header como cabecera de página -->
-  <header>
+  <!-- CONCEPTO: role banner en header; se documenta por compatibilidad con lectores antiguos -->
+  <header role="banner">
     <!-- CONCEPTO: headings h1 y h2, atributo id -->
     <h1 id="perfil">Aurelio Crespo</h1>
     <!-- CONCEPTO: entidad &amp; en texto -->
@@ -20,13 +58,15 @@
   </header>
 
   <!-- CONCEPTO: nav con lista de enlaces de navegación -->
-  <nav>
+  <!-- CONCEPTO: role navigation en nav principal; se documenta por compatibilidad con lectores antiguos -->
+  <nav role="navigation" aria-label="Navegación principal">
     <!-- CONCEPTO: ruta relativa -->
     <p><a href="index.html">&larr; Volver al inicio</a></p>
   </nav>
 
   <!-- CONCEPTO: main como contenedor del contenido principal -->
-  <main>
+  <!-- CONCEPTO: role main en main; se documenta por compatibilidad con lectores antiguos -->
+  <main role="main">
 
     <!-- ============================== -->
     <!-- 2. FOTO DE PERFIL              -->
@@ -56,14 +96,17 @@
     <!-- 4. HABILIDADES                 -->
     <!-- ============================== -->
     <!-- CONCEPTO: ul, li, atributo class -->
-    <h3>Habilidades principales</h3>
-    <ul class="habilidades">
-      <li>Desarrollo web (HTML, CSS, JavaScript)</li>
-      <li>Estrategia de marketing digital</li>
-      <li>Inteligencia artificial aplicada</li>
-      <li>Edición de foto y video</li>
-      <li>Gestión de proyectos</li>
-    </ul>
+    <!-- CONCEPTO: aria-labelledby en sección -->
+    <section aria-labelledby="habilidades-principales">
+      <h3 id="habilidades-principales">Habilidades principales</h3>
+      <ul class="habilidades">
+        <li>Desarrollo web (HTML, CSS, JavaScript)</li>
+        <li>Estrategia de marketing digital</li>
+        <li>Inteligencia artificial aplicada</li>
+        <li>Edición de foto y video</li>
+        <li>Gestión de proyectos</li>
+      </ul>
+    </section>
 
     <!-- ============================== -->
     <!-- STACK DE HERRAMIENTAS (tabla)   -->
@@ -186,7 +229,8 @@
   </main>
 
   <!-- CONCEPTO: aside con contenido complementario -->
-  <aside>
+  <!-- CONCEPTO: role complementary en aside; se documenta por compatibilidad con lectores antiguos -->
+  <aside role="complementary">
     <h3>Actualmente trabajando en:</h3>
     <ul>
       <li>Synnergy Lab como agencia de marketing digital y desarrollo</li>
@@ -197,7 +241,8 @@
   </aside>
 
   <!-- CONCEPTO: footer como pie de página -->
-  <footer>
+  <!-- CONCEPTO: role contentinfo en footer; se documenta por compatibilidad con lectores antiguos -->
+  <footer role="contentinfo">
     <hr>
     <!-- CONCEPTO: entidad &amp; en footer -->
     <p>© 2026 Aurelio Crespo &amp; Synnergy Lab</p>
