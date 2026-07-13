@@ -2,25 +2,66 @@
 <html lang="es">
 
 <head>
+  <!-- CONCEPTO: meta charset y meta viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARM vs x86 · Synnergy Blog</title>
+  <!-- CONCEPTO: title descriptivo y único -->
+  <title>ARM vs x86 para developers y marketers en Cuba · Synnergy Blog</title>
+  <!-- CONCEPTO: meta description -->
+  <meta name="description" content="Comparativa práctica entre ARM y x86 desde la experiencia de desarrollo, IA local, automatización y marketing digital en Cuba.">
+  <!-- CONCEPTO: canonical -->
+  <link rel="canonical" href="https://synnergylab.com/blog-synnergy/articles/arm-arquitectura.html">
+  <!-- CONCEPTO: robots index follow -->
+  <meta name="robots" content="index, follow">
+  <!-- CONCEPTO: hreflang es -->
+  <link rel="alternate" hreflang="es" href="https://synnergylab.com/blog-synnergy/articles/arm-arquitectura.html">
+  <!-- CONCEPTO: Open Graph -->
+  <meta property="og:title" content="ARM vs x86 para developers y marketers en Cuba · Synnergy Blog">
+  <meta property="og:description" content="Comparativa práctica entre ARM y x86 desde la experiencia de desarrollo, IA local, automatización y marketing digital en Cuba.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://synnergylab.com/blog-synnergy/articles/arm-arquitectura.html">
+  <meta property="og:image" content="https://synnergylab.com/blog-synnergy/images/arm-chip-1200.jpg">
+  <!-- CONCEPTO: Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ARM vs x86 para developers y marketers en Cuba · Synnergy Blog">
+  <meta name="twitter:description" content="Comparativa práctica entre ARM y x86 desde la experiencia de desarrollo, IA local, automatización y marketing digital en Cuba.">
+  <meta name="twitter:image" content="https://synnergylab.com/blog-synnergy/images/arm-chip-1200.jpg">
+  <!-- CONCEPTO: stylesheet media print no bloqueante -->
+  <link rel="stylesheet" media="print" href="../css/print.css">
+  <!-- CONCEPTO: Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "ARM vs x86: el chip que cambió mi forma de trabajar",
+    "author": {
+      "@type": "Person",
+      "name": "Aurelio Crespo"
+    },
+    "datePublished": "2026-07-11",
+    "description": "Comparativa práctica entre ARM y x86 para desarrollo, IA local y marketing digital desde Cuba.",
+    "url": "https://synnergylab.com/blog-synnergy/articles/arm-arquitectura.html"
+  }
+  </script>
 </head>
 
 <body>
 
   <!-- CONCEPTO: header como cabecera de página -->
-  <header>
+  <!-- CONCEPTO: role banner en header; se documenta por compatibilidad con lectores antiguos -->
+  <header role="banner">
     <h1>ARM vs x86: el chip que cambió mi forma de trabajar</h1>
     <p>Publicado el 11 de julio de 2026</p>
     <!-- CONCEPTO: nav con lista de enlaces de navegación -->
-    <nav>
+    <!-- CONCEPTO: role navigation en nav principal; se documenta por compatibilidad con lectores antiguos -->
+    <nav role="navigation" aria-label="Navegación principal">
       <p><a href="../index.html">&larr; Inicio</a></p>
     </nav>
   </header>
 
   <!-- CONCEPTO: main como contenedor del contenido principal -->
-  <main>
+  <!-- CONCEPTO: role main en main; se documenta por compatibilidad con lectores antiguos -->
+  <main role="main">
     <!-- CONCEPTO: article como pieza de contenido independiente -->
     <article>
       <h2>Resumen del artículo</h2>
@@ -40,11 +81,15 @@
 
         <!-- CONCEPTO: picture con al menos dos source y img de fallback -->
         <picture>
-          <source srcset="../images/arm-chip-large.jpg" media="(min-width: 800px)">
-          <source srcset="../images/arm-chip-small.jpg" media="(max-width: 799px)">
-          <img src="../images/arm-chip-fallback.jpg"
-            alt="Chip ARM Snapdragon X sobre placa base"
-            width="600" height="350">
+          <source srcset="../images/arm-chip-800.jpg 800w, ../images/arm-chip-1200.jpg 1200w" sizes="600px" media="(min-width: 800px)">
+          <source srcset="../images/arm-chip-480.jpg 480w, ../images/arm-chip-800.jpg 800w" sizes="100vw" media="(max-width: 799px)">
+          <!-- CONCEPTO: srcset y sizes en imágenes de artículos -->
+          <!-- CONCEPTO: loading lazy en imagen fuera del primer viewport -->
+          <img src="../images/arm-chip-800.jpg"
+            srcset="../images/arm-chip-480.jpg 480w, ../images/arm-chip-800.jpg 800w, ../images/arm-chip-1200.jpg 1200w"
+            sizes="(max-width: 600px) 100vw, 600px"
+            alt="Chip ARM Snapdragon X sobre placa base para comparar arquitecturas"
+            width="600" height="350" loading="lazy">
         </picture>
       </section>
 
@@ -163,7 +208,8 @@
     </article>
 
     <!-- CONCEPTO: aside con contenido complementario -->
-    <aside>
+    <!-- CONCEPTO: role complementary en aside; se documenta por compatibilidad con lectores antiguos -->
+    <aside role="complementary">
       <h3>Sobre el autor</h3>
       <p>Aurelio escribe sobre tecnología desde Cuba.
         Trabaja a diario con una Lenovo IdeaPad Slim 3X
@@ -177,7 +223,8 @@
   </main>
 
   <!-- CONCEPTO: footer como pie de página -->
-  <footer>
+  <!-- CONCEPTO: role contentinfo en footer; se documenta por compatibilidad con lectores antiguos -->
+  <footer role="contentinfo">
     <hr>
     <p>© 2026 Aurelio &amp; Synnergy Lab</p>
   </footer>

@@ -5,19 +5,58 @@
   <!-- CONCEPTO: meta charset y meta viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bienvenido a Synnergy Blog · Synnergy Blog</title>
+  <!-- CONCEPTO: title descriptivo y único -->
+  <title>Bienvenido a Synnergy Blog · Software, IA y marketing</title>
+  <!-- CONCEPTO: meta description -->
+  <meta name="description" content="Primer artículo de Aurelio Crespo sobre el enfoque del blog: desarrollo de software, inteligencia artificial, hardware y marketing digital.">
+  <!-- CONCEPTO: canonical -->
+  <link rel="canonical" href="https://synnergylab.com/blog-synnergy/articles/mi-primer-articulo.html">
+  <!-- CONCEPTO: robots index follow -->
+  <meta name="robots" content="index, follow">
+  <!-- CONCEPTO: hreflang es -->
+  <link rel="alternate" hreflang="es" href="https://synnergylab.com/blog-synnergy/articles/mi-primer-articulo.html">
+  <!-- CONCEPTO: Open Graph -->
+  <meta property="og:title" content="Bienvenido a Synnergy Blog · Software, IA y marketing">
+  <meta property="og:description" content="Primer artículo de Aurelio Crespo sobre el enfoque del blog: desarrollo de software, inteligencia artificial, hardware y marketing digital.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://synnergylab.com/blog-synnergy/articles/mi-primer-articulo.html">
+  <meta property="og:image" content="https://synnergylab.com/blog-synnergy/images/synnergy-cover.jpg">
+  <!-- CONCEPTO: Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bienvenido a Synnergy Blog · Software, IA y marketing">
+  <meta name="twitter:description" content="Primer artículo de Aurelio Crespo sobre el enfoque del blog: desarrollo de software, inteligencia artificial, hardware y marketing digital.">
+  <meta name="twitter:image" content="https://synnergylab.com/blog-synnergy/images/synnergy-cover.jpg">
+  <!-- CONCEPTO: stylesheet media print no bloqueante -->
+  <link rel="stylesheet" media="print" href="../css/print.css">
+  <!-- CONCEPTO: Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Bienvenido a Synnergy Blog",
+    "author": {
+      "@type": "Person",
+      "name": "Aurelio Crespo"
+    },
+    "datePublished": "2026-07-10",
+    "description": "Presentación del enfoque de Synnergy Blog: software, IA, hardware, marketing digital y tecnología aplicada.",
+    "url": "https://synnergylab.com/blog-synnergy/articles/mi-primer-articulo.html"
+  }
+  </script>
 </head>
 
 <body>
   <!-- CONCEPTO: DOCTYPE, html, head, body — estructura base -->
 
   <!-- CONCEPTO: header como cabecera de página -->
-  <header>
+  <!-- CONCEPTO: role banner en header; se documenta por compatibilidad con lectores antiguos -->
+  <header role="banner">
     <h1>Bienvenido a Synnergy Blog</h1>
     <p>Publicado el 10 de julio de 2026</p>
 
     <!-- CONCEPTO: nav con lista de enlaces de navegación -->
-    <nav>
+    <!-- CONCEPTO: role navigation en nav principal; se documenta por compatibilidad con lectores antiguos -->
+    <nav role="navigation" aria-label="Navegación principal">
       <!-- CONCEPTO: ruta relativa con ../ -->
       <p><a href="../index.html">&larr; Inicio</a></p>
     </nav>
@@ -26,7 +65,8 @@
   <hr>
 
   <!-- CONCEPTO: main como contenedor del contenido principal -->
-  <main>
+  <!-- CONCEPTO: role main en main; se documenta por compatibilidad con lectores antiguos -->
+  <main role="main">
     <!-- CONCEPTO: article como pieza de contenido independiente -->
     <article>
 
@@ -79,9 +119,13 @@
 
       <!-- CONCEPTO: figure conteniendo un elemento visual -->
       <figure>
-        <img src="../images/placeholder.txt"
-          alt="Descripción ilustrativa del artículo"
-          width="600" height="300">
+        <!-- CONCEPTO: srcset y sizes en imágenes de artículos -->
+        <!-- CONCEPTO: loading lazy en imagen fuera del primer viewport -->
+        <img src="../images/synnergy-cover-800.jpg"
+          srcset="../images/synnergy-cover-480.jpg 480w, ../images/synnergy-cover-800.jpg 800w, ../images/synnergy-cover-1200.jpg 1200w"
+          sizes="(max-width: 600px) 100vw, 600px"
+          alt="Portada ilustrativa de Synnergy Blog con temas de software, IA y marketing"
+          width="600" height="300" loading="lazy">
         <!-- CONCEPTO: figcaption describiendo el figure -->
         <figcaption>Imagen ilustrativa del primer artículo de Synnergy Blog</figcaption>
       </figure>
@@ -89,7 +133,8 @@
     </article>
 
     <!-- CONCEPTO: aside con contenido complementario -->
-    <aside>
+    <!-- CONCEPTO: role complementary en aside; se documenta por compatibilidad con lectores antiguos -->
+    <aside role="complementary">
       <h3>Artículos relacionados</h3>
       <ul>
         <li><a href="arm-arquitectura.html">ARM vs x86: el chip que cambió mi forma de trabajar</a></li>
@@ -99,7 +144,8 @@
   </main>
 
   <!-- CONCEPTO: footer como pie de página -->
-  <footer>
+  <!-- CONCEPTO: role contentinfo en footer; se documenta por compatibilidad con lectores antiguos -->
+  <footer role="contentinfo">
     <hr>
     <p>© 2026 Aurelio Crespo · Synnergy Lab</p>
   </footer>

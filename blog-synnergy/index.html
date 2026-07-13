@@ -5,21 +5,60 @@
   <!-- CONCEPTO: meta charset y meta viewport en head -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Synnergy Blog</title>
+  <!-- CONCEPTO: title descriptivo y único -->
+  <title>Synnergy Blog · Software, IA, ARM y marketing digital en Cuba</title>
+  <!-- CONCEPTO: meta description -->
+  <meta name="description" content="Blog personal de Aurelio Crespo sobre software, inteligencia artificial, hardware ARM, herramientas de Google, marketing avanzado y tecnología en Cuba.">
+  <!-- CONCEPTO: canonical -->
+  <link rel="canonical" href="https://synnergylab.com/blog-synnergy/">
+  <!-- CONCEPTO: robots index follow -->
+  <meta name="robots" content="index, follow">
+  <!-- CONCEPTO: hreflang es -->
+  <link rel="alternate" hreflang="es" href="https://synnergylab.com/blog-synnergy/">
+  <!-- CONCEPTO: Open Graph -->
+  <meta property="og:title" content="Synnergy Blog · Software, IA, ARM y marketing digital en Cuba">
+  <meta property="og:description" content="Ideas prácticas de Aurelio Crespo sobre desarrollo, IA, hardware ARM, marketing avanzado y actualidad tecnológica en Cuba.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://synnergylab.com/blog-synnergy/">
+  <meta property="og:image" content="https://synnergylab.com/blog-synnergy/images/synnergy-cover.jpg">
+  <!-- CONCEPTO: Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Synnergy Blog · Software, IA, ARM y marketing digital en Cuba">
+  <meta name="twitter:description" content="Software, inteligencia artificial, hardware ARM, Google tools, marketing avanzado y tecnología cubana con Aurelio Crespo.">
+  <meta name="twitter:image" content="https://synnergylab.com/blog-synnergy/images/synnergy-cover.jpg">
+  <!-- CONCEPTO: preload de imagen de portada -->
+  <link rel="preload" as="image" href="images/synnergy-cover.jpg">
+  <!-- CONCEPTO: preconnect para dominios externos -->
+  <link rel="preconnect" href="https://www.google.com">
+  <!-- CONCEPTO: prefetch del artículo más probable de visitar -->
+  <link rel="prefetch" href="articles/arm-arquitectura.html">
+  <!-- CONCEPTO: stylesheet media print no bloqueante -->
+  <link rel="stylesheet" media="print" href="css/print.css">
+  <!-- CONCEPTO: Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Synnergy Blog",
+    "url": "https://synnergylab.com/blog-synnergy/",
+    "description": "Blog personal de Aurelio Crespo sobre software, inteligencia artificial, hardware ARM, herramientas de Google, marketing avanzado y tecnología en Cuba.",
+    "inLanguage": "es"
+  }
+  </script>
 </head>
 
 <body>
   <!-- CONCEPTO: DOCTYPE, html, head, body — estructura base -->
-
-  <!-- CONCEPTO: header como cabecera de página -->
-  <header>
+  <!-- CONCEPTO: role banner en header; se documenta por compatibilidad con lectores antiguos -->
+  <header role="banner">
     <!-- CONCEPTO: atributo id en elemento -->
     <h1 id="inicio">Synnergy Blog</h1>
     <p>Tecnología, software, hardware e IA para programadores.</p>
+    <!-- CONCEPTO: tabindex 0 en elemento no interactivo relevante para teclado -->
+    <p tabindex="0">Explora análisis prácticos desde Cuba para crear, automatizar y vender mejor con tecnología.</p>
   </header>
-
-  <!-- CONCEPTO: nav con lista de enlaces de navegación -->
-  <nav>
+  <!-- CONCEPTO: role navigation en nav principal; se documenta por compatibilidad con lectores antiguos -->
+  <nav role="navigation" aria-label="Navegación principal">
     <ul>
       <li><a href="index.html">Inicio</a></li>
       <!-- CONCEPTO: atributo title en enlace -->
@@ -28,25 +67,23 @@
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </nav>
-
-  <!-- CONCEPTO: main como contenedor del contenido principal -->
-  <main>
+  <!-- CONCEPTO: role main en main; se documenta por compatibilidad con lectores antiguos -->
+  <main role="main">
     <!-- CONCEPTO: entidades HTML -->
     <p>Este blog cubre HTML, CSS &amp; JavaScript. Aprende a usar etiquetas
       como &lt;head&gt;, &lt;body&gt; y más. Separador:&nbsp;|</p>
-
     <!-- CONCEPTO: section agrupando contenido temático -->
-    <section>
-      <h2>Artículos recientes</h2>
+    <!-- CONCEPTO: aria-labelledby en sección -->
+    <section aria-labelledby="articulos-recientes">
+      <h2 id="articulos-recientes">Artículos recientes</h2>
       <ul>
         <li><a href="articles/mi-primer-articulo.html">Bienvenido a Synnergy Blog</a></li>
         <li><a href="articles/arm-arquitectura.html">ARM vs x86: el chip que cambió mi forma de trabajar</a></li>
       </ul>
     </section>
   </main>
-
-  <!-- CONCEPTO: footer como pie de página -->
-  <footer>
+  <!-- CONCEPTO: role contentinfo en footer; se documenta por compatibilidad con lectores antiguos -->
+  <footer role="contentinfo">
     <hr>
     <p>© 2026 Aurelio Crespo · Synnergy Lab</p>
   </footer>
