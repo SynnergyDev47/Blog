@@ -8,7 +8,8 @@
   <!-- CONCEPTO: title descriptivo y único -->
   <title>Aurelio Crespo · Programador y asesor de marketing digital</title>
   <!-- CONCEPTO: meta description -->
-  <meta name="description" content="Perfil de Aurelio Crespo, fundador de Synnergy Lab, programador y asesor de marketing digital especializado en IA, software y automatización.">
+  <meta name="description"
+    content="Perfil de Aurelio Crespo, fundador de Synnergy Lab, programador y asesor de marketing digital especializado en IA, software y automatización.">
   <!-- CONCEPTO: canonical -->
   <link rel="canonical" href="https://synnergylab.com/blog-synnergy/about.html">
   <!-- CONCEPTO: robots index follow -->
@@ -17,17 +18,21 @@
   <link rel="alternate" hreflang="es" href="https://synnergylab.com/blog-synnergy/about.html">
   <!-- CONCEPTO: Open Graph -->
   <meta property="og:title" content="Aurelio Crespo · Programador y asesor de marketing digital">
-  <meta property="og:description" content="Perfil de Aurelio Crespo, fundador de Synnergy Lab, programador y asesor de marketing digital especializado en IA, software y automatización.">
+  <meta property="og:description"
+    content="Perfil de Aurelio Crespo, fundador de Synnergy Lab, programador y asesor de marketing digital especializado en IA, software y automatización.">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://synnergylab.com/blog-synnergy/about.html">
   <meta property="og:image" content="https://synnergylab.com/blog-synnergy/images/perfil.jpg">
   <!-- CONCEPTO: Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Aurelio Crespo · Programador y asesor de marketing digital">
-  <meta name="twitter:description" content="Perfil de Aurelio Crespo, fundador de Synnergy Lab, programador y asesor de marketing digital especializado en IA, software y automatización.">
+  <meta name="twitter:description"
+    content="Perfil de Aurelio Crespo, fundador de Synnergy Lab, programador y asesor de marketing digital especializado en IA, software y automatización.">
   <meta name="twitter:image" content="https://synnergylab.com/blog-synnergy/images/perfil.jpg">
   <!-- CONCEPTO: stylesheet media print no bloqueante -->
   <link rel="stylesheet" media="print" href="css/print.css">
+  <!-- CONCEPTO: defer en script — carga JS sin bloquear el renderizado -->
+  <script defer src="js/canvas-demo.js"></script>
   <!-- CONCEPTO: Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
@@ -53,6 +58,14 @@
   <header role="banner">
     <!-- CONCEPTO: headings h1 y h2, atributo id -->
     <h1 id="perfil">Aurelio Crespo</h1>
+    <!-- CONCEPTO: SVG inline informativo — logo de Synnergy Lab con significado semántico -->
+    <!-- CONCEPTO: role="img" con <title> en SVG que aporta información -->
+    <svg width="140" height="32" viewBox="0 0 140 32" role="img" aria-labelledby="svg-logo-title">
+      <title id="svg-logo-title">Logo de Synnergy Lab</title>
+      <rect x="0" y="2" width="28" height="28" rx="6" fill="#e94560"/>
+      <text x="14" y="22" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="sans-serif">S</text>
+      <text x="38" y="22" font-size="15" fill="#1a1a2e" font-family="sans-serif" font-weight="bold">Synnergy Lab</text>
+    </svg>
     <!-- CONCEPTO: entidad &amp; en texto -->
     <h2>Programador &amp; Asesor de Marketing Digital</h2>
   </header>
@@ -206,6 +219,13 @@
     <h4>Sobre este sitio</h4>
     <p>Este blog está escrito en <code>&lt;HTML&gt;</code> puro, sin frameworks.</p>
 
+    <!-- CONCEPTO: Canvas API — elemento canvas con id, width y height -->
+    <!-- El script js/canvas-demo.js dibuja un badge de Synnergy Lab usando getContext("2d") -->
+    <h4>Badge generado con Canvas</h4>
+    <canvas id="canvas-synnergy" width="280" height="90">
+      Tu navegador no soporta el elemento canvas.
+    </canvas>
+
     <!-- ============================== -->
     <!-- 8. CONTACTO                    -->
     <!-- ============================== -->
@@ -219,12 +239,31 @@
     <h3>Encuéntrame en</h3>
     <ul>
       <li><a href="https://github.com/SynnergyDev47" title="Perfil de Aurelio Crespo en GitHub">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/aurelio-crespo/"
-          title="Perfil de Aurelio Crespo en LinkedIn">LinkedIn</a>
-      </li>
-      <li><a href="https://www.instagram.com/synnergy_dev/" title="Perfil de Aurelio Crespo en Instagram">Instagram</a>
-      </li>
+      <li><a href="https://www.linkedin.com/in/aurelio-crespo/"title="Perfil de Aurelio Crespo en LinkedIn">LinkedIn</a></li>
+      <li><a href="https://www.instagram.com/synnergy_dev/" title="Perfil de Aurelio Crespo en Instagram">Instagram</a></li>
     </ul>
+
+    <!-- ============================== -->
+    <!-- RECURSOS EMBEBIDOS (Fase 04)   -->
+    <!-- ============================== -->
+
+    <!-- CONCEPTO: <embed> con recurso PDF — portfolio de ejemplo -->
+    <h3>Portfolio</h3>
+    <p>Vista previa del portfolio en formato PDF:</p>
+    <embed type="application/pdf" src="media/portfolio-aurelio.pdf"
+      width="600" height="400"
+      title="Portfolio de Aurelio Crespo en formato PDF">
+
+    <!-- CONCEPTO: <object> con data y contenido de fallback -->
+    <h3>Certificación</h3>
+    <p>Certificación de Google Digital Marketing:</p>
+    <object data="media/certificacion-google.pdf" type="application/pdf"
+      width="600" height="400">
+      <!-- Contenido de fallback cuando el recurso no se puede cargar -->
+      <p>Tu navegador no puede mostrar este PDF.
+        <a href="media/certificacion-google.pdf">Descarga la certificación aquí</a>.
+      </p>
+    </object>
 
   </main>
 

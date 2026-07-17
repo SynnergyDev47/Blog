@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+  ============================================================
+  email-newsletter.html — Fase 04: HTML para emails (quirks)
+  ============================================================
+
+  EXCEPCIÓN DOCUMENTADA: Este archivo rompe deliberadamente
+  las reglas del resto del proyecto por las siguientes razones:
+
+  1. USA ESTILOS INLINE (style="") — Porque la mayoría de
+     clientes de correo (Gmail, Outlook, Yahoo Mail, Apple Mail)
+     eliminan las etiquetas <style> y <link>. Los estilos inline
+     son la ÚNICA forma confiable de aplicar formato en emails.
+
+  2. USA LAYOUT DE TABLAS (<table>) — Porque los clientes de
+     correo no soportan Flexbox, Grid ni elementos semánticos
+     de forma confiable. Las tablas son el estándar de facto
+     para layout en HTML de email.
+
+  3. NO USA ELEMENTOS SEMÁNTICOS (<header>, <main>, <footer>) —
+     Porque clientes como Outlook los ignoran o los renderizan
+     de forma impredecible.
+
+  4. ANCHO FIJO DE 600px — Es el estándar recomendado para
+     emails, ya que la mayoría de clientes de correo de
+     escritorio muestran un panel de lectura de ~600px de ancho.
+
+  Este archivo NO se valida con criterios W3C estándar para web.
+  Se valida con los criterios propios del HTML para email.
+  ============================================================
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter · Synnergy Blog — Julio 2026</title>
+  <!--
+    NOTA: Esta etiqueta <title> no se muestra en la mayoría de
+    clientes de correo, pero algunos la usan como pestaña del
+    navegador si el email se abre en web.
+  -->
+</head>
+
+<!-- CONCEPTO: HTML para email — estilos inline y tablas para layout -->
+
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: Arial, Helvetica, sans-serif;">
+
+  <!-- Tabla contenedora principal — centra el email y limita el ancho -->
+  <!-- CONCEPTO: HTML para email — ancho fijo de 600px -->
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"
+    style="margin: 0 auto; background-color: #ffffff; max-width: 600px;">
+
+    <!-- ============================== -->
+    <!-- CABECERA DEL EMAIL             -->
+    <!-- ============================== -->
+    <tr>
+      <td style="background-color: #1a1a2e; padding: 24px 30px; text-align: center;">
+        <!-- CONCEPTO: HTML para email — estilos inline en lugar de clases CSS -->
+        <h1 style="margin: 0; color: #e94560; font-size: 24px; font-weight: bold;">
+          Synnergy Blog
+        </h1>
+        <p style="margin: 8px 0 0 0; color: #a8a8b3; font-size: 14px;">
+          Newsletter · Julio 2026
+        </p>
+      </td>
+    </tr>
+
+    <!-- ============================== -->
+    <!-- SALUDO                         -->
+    <!-- ============================== -->
+    <tr>
+      <td style="padding: 30px 30px 10px 30px;">
+        <p style="margin: 0; font-size: 16px; color: #333333; line-height: 1.6;">
+          ¡Hola!
+        </p>
+        <p style="margin: 12px 0 0 0; font-size: 16px; color: #333333; line-height: 1.6;">
+          Soy Aurelio, fundador de <strong>Synnergy Lab</strong>. Este es el resumen
+          mensual de lo que publiqué en el blog sobre software, IA, hardware ARM,
+          marketing digital y tecnología en Cuba.
+        </p>
+      </td>
+    </tr>
+
+    <!-- ============================== -->
+    <!-- ARTÍCULOS DESTACADOS           -->
+    <!-- ============================== -->
+    <tr>
+      <td style="padding: 20px 30px;">
+        <h2
+          style="margin: 0 0 16px 0; font-size: 20px; color: #1a1a2e; border-bottom: 2px solid #e94560; padding-bottom: 8px;">
+          Artículos de este mes
+        </h2>
+
+        <!-- Artículo 1 -->
+        <!-- CONCEPTO: HTML para email — tablas anidadas para estructura de tarjeta -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 16px;">
+          <tr>
+            <td style="padding: 16px; background-color: #f8f8fa; border-left: 4px solid #e94560;">
+              <h3 style="margin: 0 0 8px 0; font-size: 16px; color: #1a1a2e;">
+                <a href="https://synnergylab.com/blog-synnergy/articles/arm-arquitectura.html"
+                  style="color: #e94560; text-decoration: none;">
+                  ARM vs x86: el chip que cambió mi forma de trabajar
+                </a>
+              </h3>
+              <p style="margin: 0; font-size: 14px; color: #555555; line-height: 1.5;">
+                Comparativa práctica entre ARM y x86 desde la experiencia de
+                desarrollo, IA local y marketing digital en Cuba.
+              </p>
+              <p style="margin: 8px 0 0 0; font-size: 12px; color: #888888;">
+                11 de julio de 2026 · Hardware
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Artículo 2 -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 16px;">
+          <tr>
+            <td style="padding: 16px; background-color: #f8f8fa; border-left: 4px solid #0f3460;">
+              <h3 style="margin: 0 0 8px 0; font-size: 16px; color: #1a1a2e;">
+                <a href="https://synnergylab.com/blog-synnergy/articles/mi-primer-articulo.html"
+                  style="color: #0f3460; text-decoration: none;">
+                  Bienvenido a Synnergy Blog
+                </a>
+              </h3>
+              <p style="margin: 0; font-size: 14px; color: #555555; line-height: 1.5;">
+                Presentación del enfoque del blog: software, IA, hardware,
+                marketing digital y tecnología aplicada.
+              </p>
+              <p style="margin: 8px 0 0 0; font-size: 12px; color: #888888;">
+                10 de julio de 2026 · General
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- ============================== -->
+    <!-- CALL TO ACTION                 -->
+    <!-- ============================== -->
+    <tr>
+      <td style="padding: 10px 30px 30px 30px; text-align: center;">
+        <!-- CONCEPTO: HTML para email — botón con estilos inline (no CSS class) -->
+        <a href="https://synnergylab.com/blog-synnergy/"
+          style="display: inline-block; padding: 12px 28px; background-color: #e94560; color: #ffffff; text-decoration: none; font-size: 16px; font-weight: bold; border-radius: 4px;">
+          Visitar el blog
+        </a>
+      </td>
+    </tr>
+
+    <!-- ============================== -->
+    <!-- SEPARADOR                      -->
+    <!-- ============================== -->
+    <tr>
+      <td style="padding: 0 30px;">
+        <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 0;">
+      </td>
+    </tr>
+
+    <!-- ============================== -->
+    <!-- PIE DEL EMAIL                  -->
+    <!-- ============================== -->
+    <tr>
+      <td style="padding: 20px 30px; text-align: center;">
+        <p style="margin: 0; font-size: 12px; color: #888888; line-height: 1.5;">
+          Recibiste este email porque te suscribiste a Synnergy Blog.<br>
+          <a href="#" style="color: #e94560; text-decoration: underline;">Cancelar suscripción</a>
+        </p>
+        <p style="margin: 12px 0 0 0; font-size: 12px; color: #aaaaaa;">
+          © 2026 Aurelio Crespo · Synnergy Lab · Cuba
+        </p>
+      </td>
+    </tr>
+
+  </table>
+
+</body>
+
+</html>

@@ -8,7 +8,8 @@
   <!-- CONCEPTO: title descriptivo y único -->
   <title>ARM vs x86 para developers y marketers en Cuba · Synnergy Blog</title>
   <!-- CONCEPTO: meta description -->
-  <meta name="description" content="Comparativa práctica entre ARM y x86 desde la experiencia de desarrollo, IA local, automatización y marketing digital en Cuba.">
+  <meta name="description"
+    content="Comparativa práctica entre ARM y x86 desde la experiencia de desarrollo, IA local, automatización y marketing digital en Cuba.">
   <!-- CONCEPTO: canonical -->
   <link rel="canonical" href="https://synnergylab.com/blog-synnergy/articles/arm-arquitectura.html">
   <!-- CONCEPTO: robots index follow -->
@@ -17,17 +18,22 @@
   <link rel="alternate" hreflang="es" href="https://synnergylab.com/blog-synnergy/articles/arm-arquitectura.html">
   <!-- CONCEPTO: Open Graph -->
   <meta property="og:title" content="ARM vs x86 para developers y marketers en Cuba · Synnergy Blog">
-  <meta property="og:description" content="Comparativa práctica entre ARM y x86 desde la experiencia de desarrollo, IA local, automatización y marketing digital en Cuba.">
+  <meta property="og:description"
+    content="Comparativa práctica entre ARM y x86 desde la experiencia de desarrollo, IA local, automatización y marketing digital en Cuba.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://synnergylab.com/blog-synnergy/articles/arm-arquitectura.html">
   <meta property="og:image" content="https://synnergylab.com/blog-synnergy/images/arm-chip-1200.jpg">
   <!-- CONCEPTO: Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ARM vs x86 para developers y marketers en Cuba · Synnergy Blog">
-  <meta name="twitter:description" content="Comparativa práctica entre ARM y x86 desde la experiencia de desarrollo, IA local, automatización y marketing digital en Cuba.">
+  <meta name="twitter:description"
+    content="Comparativa práctica entre ARM y x86 desde la experiencia de desarrollo, IA local, automatización y marketing digital en Cuba.">
   <meta name="twitter:image" content="https://synnergylab.com/blog-synnergy/images/arm-chip-1200.jpg">
   <!-- CONCEPTO: stylesheet media print no bloqueante -->
   <link rel="stylesheet" media="print" href="../css/print.css">
+  <!-- CONCEPTO: defer en script — carga JS sin bloquear el renderizado -->
+  <script defer src="../js/articulo.js"></script>
+  <script defer src="../js/web-components.js"></script>
   <!-- CONCEPTO: Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
@@ -79,17 +85,26 @@
           en cómo cada arquitectura gestiona energía, compatibilidad y flujo de
           trabajo diario.</p>
 
+        <!-- CONCEPTO: Web Component <synnergy-quote> — Custom Element con Shadow DOM y slot -->
+        <!-- Este componente está definido en js/web-components.js y se renderiza con su propio Shadow DOM -->
+        <synnergy-quote author="Aurelio Crespo">
+          La diferencia no está solo en benchmarks, sino en cómo cada
+          arquitectura gestiona tu flujo de trabajo diario.
+        </synnergy-quote>
+
         <!-- CONCEPTO: picture con al menos dos source y img de fallback -->
         <picture>
-          <source srcset="../images/arm-chip-800.jpg 800w, ../images/arm-chip-1200.jpg 1200w" sizes="600px" media="(min-width: 800px)">
-          <source srcset="../images/arm-chip-480.jpg 480w, ../images/arm-chip-800.jpg 800w" sizes="100vw" media="(max-width: 799px)">
+          <source srcset="../images/arm-chip-800.jpg 800w, ../images/arm-chip-1200.jpg 1200w" sizes="600px"
+            media="(min-width: 800px)">
+          <source srcset="../images/arm-chip-480.jpg 480w, ../images/arm-chip-800.jpg 800w" sizes="100vw"
+            media="(max-width: 799px)">
           <!-- CONCEPTO: srcset y sizes en imágenes de artículos -->
           <!-- CONCEPTO: loading lazy en imagen fuera del primer viewport -->
           <img src="../images/arm-chip-800.jpg"
             srcset="../images/arm-chip-480.jpg 480w, ../images/arm-chip-800.jpg 800w, ../images/arm-chip-1200.jpg 1200w"
             sizes="(max-width: 600px) 100vw, 600px"
-            alt="Chip ARM Snapdragon X sobre placa base para comparar arquitecturas"
-            width="600" height="350" loading="lazy">
+            alt="Chip ARM Snapdragon X sobre placa base para comparar arquitecturas" width="600" height="350"
+            loading="lazy">
         </picture>
       </section>
 
@@ -171,10 +186,7 @@
           <video controls width="600" poster="../images/video-poster.jpg">
             <source src="../media/arm-demo.mp4" type="video/mp4">
             <!-- CONCEPTO: track dentro de video con kind="subtitles" -->
-            <track kind="subtitles"
-              src="../media/arm-demo.vtt"
-              srclang="es"
-              label="Español">
+            <track kind="subtitles" src="../media/arm-demo.vtt" srclang="es" label="Español">
             Tu navegador no soporta el elemento video.
           </video>
           <!-- CONCEPTO: figcaption describiendo el figure -->
@@ -182,6 +194,18 @@
             Demo de rendimiento del Snapdragon X en tareas de desarrollo
           </figcaption>
         </figure>
+      </section>
+
+      <!-- CONCEPTO: <iframe> incrustando contenido externo coherente con el artículo -->
+      <!-- CONCEPTO: title descriptivo obligatorio por accesibilidad y loading lazy -->
+      <section>
+        <h2>Video externo recomendado</h2>
+        <p>Un análisis en profundidad de la arquitectura ARM y su impacto
+          en el ecosistema de desarrollo:</p>
+        <iframe src="https://www.youtube.com/embed/AADZo73yrq4"
+          title="Video sobre la arquitectura ARM y su comparación con x86 para developers" width="560" height="315"
+          loading="lazy" allowfullscreen>
+        </iframe>
       </section>
 
       <!-- CONCEPTO: section agrupando contenido temático -->
@@ -207,9 +231,14 @@
 
     </article>
 
+    <!-- CONCEPTO: addEventListener (click) — botón que muestra/oculta el aside de artículos relacionados -->
+    <button id="toggle-aside" type="button" aria-expanded="true" aria-controls="aside-relacionados">
+      Ocultar artículos relacionados
+    </button>
+
     <!-- CONCEPTO: aside con contenido complementario -->
     <!-- CONCEPTO: role complementary en aside; se documenta por compatibilidad con lectores antiguos -->
-    <aside role="complementary">
+    <aside role="complementary" id="aside-relacionados">
       <h3>Sobre el autor</h3>
       <p>Aurelio escribe sobre tecnología desde Cuba.
         Trabaja a diario con una Lenovo IdeaPad Slim 3X
@@ -217,7 +246,7 @@
       <h3>Artículos relacionados</h3>
       <ul>
         <li><a href="mi-primer-articulo.html">
-          Bienvenido a Synnergy Blog</a></li>
+            Bienvenido a Synnergy Blog</a></li>
       </ul>
     </aside>
   </main>

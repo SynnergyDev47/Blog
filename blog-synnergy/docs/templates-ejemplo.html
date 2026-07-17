@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+  ============================================================
+  templates-ejemplo.html — Fase 04: Templates HTML (Jinja2 / Liquid)
+  ============================================================
+
+  IMPORTANTE: Este archivo es DOCUMENTACIÓN ILUSTRATIVA.
+  NO es código ejecutable. No hay backend ni motor de templates
+  conectado a este proyecto. Su propósito es mostrar cómo se
+  vería este mismo blog si usara un motor de templates para
+  generar sus páginas dinámicamente a partir de datos.
+
+  Se incluyen dos ejemplos:
+  1. Sintaxis Jinja2 (Python — usado en Flask, Django, etc.)
+  2. Sintaxis Liquid (Ruby — usado en Jekyll, Shopify, etc.)
+
+  Ambos muestran cómo se generaría la lista de artículos
+  de index.html si los artículos vinieran de una base de datos
+  en lugar de estar escritos a mano en el HTML.
+  ============================================================
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentación: ejemplos de templates Jinja2 y Liquid</title>
+  <meta name="robots" content="noindex, nofollow">
+</head>
+
+<body>
+
+  <header>
+    <h1>Ejemplos de templates HTML — Solo documentación</h1>
+    <p>Este archivo no es una página del sitio. Es un ejemplo
+      educativo que muestra cómo se usarían motores de templates
+      para generar las páginas de Synnergy Blog dinámicamente.</p>
+  </header>
+
+  <main>
+
+    <!-- ====================================================== -->
+    <!-- EJEMPLO 1: JINJA2 (Python)                              -->
+    <!-- ====================================================== -->
+
+    <section>
+      <h2>Ejemplo con Jinja2 (Python)</h2>
+      <p>Jinja2 se usa en frameworks como Flask y Django.
+        Las plantillas usan <code>{% %}</code> para lógica y
+        <code>{{ }}</code> para variables.
+      </p>
+
+      <!-- CONCEPTO: Template Jinja2 — {% extends %} hereda de una plantilla base -->
+      <p>Primero se define una plantilla base con bloques reemplazables:</p>
+
+      <pre><code>&lt;!-- archivo: templates/base.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+  &lt;!-- CONCEPTO: Template Jinja2 — {{ variable }} inserta un valor dinámico --&gt;
+  &lt;title&gt;{{ titulo }} · Synnergy Blog&lt;/title&gt;
+  &lt;meta name="description" content="{{ descripcion }}"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header role="banner"&gt;
+    &lt;h1&gt;Synnergy Blog&lt;/h1&gt;
+    &lt;nav role="navigation" aria-label="Navegación principal"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/about"&gt;Sobre mí&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main role="main"&gt;
+    &lt;!-- CONCEPTO: Template Jinja2 — {% block %} define una zona reemplazable --&gt;
+    {% block contenido %}{% endblock %}
+  &lt;/main&gt;
+
+  &lt;footer role="contentinfo"&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&amp;copy; 2026 Aurelio Crespo &amp;amp; Synnergy Lab&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <p>Luego, la página de inicio hereda de la base y rellena el bloque:</p>
+
+      <pre><code>&lt;!-- archivo: templates/index.html --&gt;
+
+&lt;!-- CONCEPTO: Template Jinja2 — {% extends %} hereda de plantilla base --&gt;
+{% extends "base.html" %}
+
+&lt;!-- CONCEPTO: Template Jinja2 — {% block %} reemplaza el contenido del bloque padre --&gt;
+{% block contenido %}
+  &lt;section aria-labelledby="articulos-recientes"&gt;
+    &lt;h2 id="articulos-recientes"&gt;Artículos recientes&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;!-- CONCEPTO: Template Jinja2 — {% for %} itera sobre una colección --&gt;
+      {% for articulo in articulos %}
+        &lt;li&gt;
+          &lt;a href="{{ articulo.url }}"&gt;{{ articulo.titulo }}&lt;/a&gt;
+          &lt;small&gt;— {{ articulo.fecha }} · {{ articulo.categoria }}&lt;/small&gt;
+        &lt;/li&gt;
+      {% endfor %}
+    &lt;/ul&gt;
+  &lt;/section&gt;
+{% endblock %}</code></pre>
+
+      <p>Los datos vendrían del backend (por ejemplo, Flask):</p>
+      <pre><code># archivo: app.py (Python / Flask)
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def inicio():
+    articulos = [
+        {
+            "titulo": "Bienvenido a Synnergy Blog",
+            "url": "/articles/mi-primer-articulo",
+            "fecha": "2026-07-10",
+            "categoria": "General"
+        },
+        {
+            "titulo": "ARM vs x86: el chip que cambió mi forma de trabajar",
+            "url": "/articles/arm-arquitectura",
+            "fecha": "2026-07-11",
+            "categoria": "Hardware"
+        }
+    ]
+    return render_template("index.html",
+                           titulo="Inicio",
+                           descripcion="Blog de Aurelio Crespo",
+                           articulos=articulos)</code></pre>
+    </section>
+
+    <hr>
+
+    <!-- ====================================================== -->
+    <!-- EJEMPLO 2: LIQUID (Ruby / Jekyll / Shopify)             -->
+    <!-- ====================================================== -->
+
+    <section>
+      <h2>Ejemplo con Liquid (Jekyll / Shopify)</h2>
+      <p>Liquid se usa en Jekyll (sitios estáticos) y Shopify.
+        Usa <code>{% %}</code> para lógica y <code>{{ }}</code>
+        para variables, igual que Jinja2, pero con diferencias
+        en herencia y componentes.</p>
+
+      <p>En Liquid no existe <code>{% extends %}</code>. En su lugar
+        se usan <code>{% include %}</code> para insertar fragmentos
+        reutilizables (parciales).</p>
+
+      <pre><code>&lt;!-- archivo: _includes/nav.html --&gt;
+&lt;!-- CONCEPTO: Template Liquid — {% include %} inserta un parcial reutilizable --&gt;
+&lt;nav role="navigation" aria-label="Navegación principal"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/about"&gt;Sobre mí&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+      <p>La página principal de Jekyll iteraría sobre los posts:</p>
+
+      <pre><code>&lt;!-- archivo: index.html (Jekyll) --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+  &lt;!-- CONCEPTO: Template Liquid — {{ variable }} inserta un valor dinámico --&gt;
+  &lt;title&gt;{{ site.title }}&lt;/title&gt;
+  &lt;meta name="description" content="{{ site.description }}"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header role="banner"&gt;
+    &lt;h1&gt;{{ site.title }}&lt;/h1&gt;
+
+    &lt;!-- CONCEPTO: Template Liquid — {% include %} inserta el parcial de navegación --&gt;
+    {% include nav.html %}
+  &lt;/header&gt;
+
+  &lt;main role="main"&gt;
+    &lt;section aria-labelledby="articulos-recientes"&gt;
+      &lt;h2 id="articulos-recientes"&gt;Artículos recientes&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;!-- CONCEPTO: Template Liquid — {% for %} itera sobre una colección --&gt;
+        {% for post in site.posts %}
+          &lt;li&gt;
+            &lt;a href="{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;
+            &lt;small&gt;— {{ post.date | date: "%Y-%m-%d" }} · {{ post.category }}&lt;/small&gt;
+          &lt;/li&gt;
+        {% endfor %}
+      &lt;/ul&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer role="contentinfo"&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&amp;copy; 2026 Aurelio Crespo &amp;amp; Synnergy Lab&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <p>Los datos en Jekyll vendrían de archivos Markdown con
+        frontmatter YAML (por ejemplo,
+        <code>_posts/2026-07-11-arm-arquitectura.md</code>).
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <hr>
+    <p>Este archivo es puramente ilustrativo. No es parte funcional del sitio.</p>
+  </footer>
+
+</body>
+
+</html>

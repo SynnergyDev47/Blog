@@ -32,6 +32,8 @@
   <link rel="preconnect" href="https://www.google.com">
   <!-- CONCEPTO: prefetch del artículo más probable de visitar -->
   <link rel="prefetch" href="articles/arm-arquitectura.html">
+  <!-- CONCEPTO: defer en script — carga JS sin bloquear el renderizado -->
+  <script defer src="js/index.js"></script>
   <!-- CONCEPTO: stylesheet media print no bloqueante -->
   <link rel="stylesheet" media="print" href="css/print.css">
   <!-- CONCEPTO: Schema.org JSON-LD -->
@@ -60,7 +62,14 @@
   <!-- CONCEPTO: role navigation en nav principal; se documenta por compatibilidad con lectores antiguos -->
   <nav role="navigation" aria-label="Navegación principal">
     <ul>
-      <li><a href="index.html">Inicio</a></li>
+      <li>
+        <!-- CONCEPTO: SVG inline decorativo — ícono de flecha en enlace de navegación -->
+        <!-- CONCEPTO: aria-hidden="true" en SVG puramente decorativo -->
+        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+          <polygon points="0,0 12,6 0,12" fill="currentColor"/>
+        </svg>
+        <a href="index.html">Inicio</a>
+      </li>
       <!-- CONCEPTO: atributo title en enlace -->
       <li><a href="about.html" title="Ir a la página sobre mí">Sobre mí</a></li>
       <li><a href="articles/arm-arquitectura.html">Artículos</a></li>
@@ -76,9 +85,18 @@
     <!-- CONCEPTO: aria-labelledby en sección -->
     <section aria-labelledby="articulos-recientes">
       <h2 id="articulos-recientes">Artículos recientes</h2>
-      <ul>
-        <li><a href="articles/mi-primer-articulo.html">Bienvenido a Synnergy Blog</a></li>
-        <li><a href="articles/arm-arquitectura.html">ARM vs x86: el chip que cambió mi forma de trabajar</a></li>
+      <!-- CONCEPTO: data-* atributos personalizados en al menos 3 elementos -->
+      <!-- Cada <li> tiene data-category y data-date que el script js/index.js lee con .dataset -->
+      <ul id="lista-articulos">
+        <li data-category="General" data-date="2026-07-10">
+          <a href="articles/mi-primer-articulo.html">Bienvenido a Synnergy Blog</a>
+        </li>
+        <li data-category="Hardware" data-date="2026-07-11">
+          <a href="articles/arm-arquitectura.html">ARM vs x86: el chip que cambió mi forma de trabajar</a>
+        </li>
+        <li data-category="Marketing" data-date="2026-07-15">
+          <a href="#">Neurocopywriting: cómo escribir para vender sin parecer vendedor</a>
+        </li>
       </ul>
     </section>
   </main>
