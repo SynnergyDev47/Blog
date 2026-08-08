@@ -73,8 +73,15 @@
   <!-- CONCEPTO: nav con lista de enlaces de navegación -->
   <!-- CONCEPTO: role navigation en nav principal; se documenta por compatibilidad con lectores antiguos -->
   <nav role="navigation" aria-label="Navegación principal">
-    <!-- CONCEPTO: ruta relativa -->
-    <p><a href="index.html">&larr; Volver al inicio</a></p>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="articles/index.html" title="Ir al catálogo de artículos del blog">Blog</a></li>
+      <li><a href="tienda/index.html" title="Ir a la tienda y productos digitales">Tienda / Productos</a></li>
+      <li><a href="about.html" aria-current="page" title="Ir a la página sobre mí y CV">Sobre mí / CV</a></li>
+      <li><a href="servicios/index.html" title="Ir a la página de servicios profesionales">Servicios</a></li>
+      <li><a href="portafolio/index.html" title="Ir al portafolio de proyectos">Portafolio</a></li>
+      <li><a href="contacto.html" title="Ir a la página de contacto">Contacto</a></li>
+    </ul>
   </nav>
 
   <!-- CONCEPTO: main como contenedor del contenido principal -->
@@ -196,9 +203,25 @@
     </ol>
 
     <!-- ============================== -->
-    <!-- 6. GLOSARIO RAPIDO             -->
+    <!-- 6. GLOSARIO Y LENGUAJES        -->
     <!-- ============================== -->
     <!-- CONCEPTO: dl, dt, dd -->
+    <h3>Idiomas y Comunicación</h3>
+    <dl>
+      <dt>Español</dt>
+      <dd>Lengua materna / Nativo.</dd>
+      <dt>Inglés</dt>
+      <dd>Nivel técnico y profesional (lectura fluida de documentación, escritura de código y comunicación escrita).</dd>
+    </dl>
+
+    <h3>Intereses Profesionales</h3>
+    <ul>
+      <li>Desarrollo de sitios web accesibles y de alto rendimiento sin sobreingeniería.</li>
+      <li>Modelos de lenguaje e Inteligencia Artificial aplicados a la automatización de pequeñas empresas.</li>
+      <li>Investigación de hardware ARM (Snapdragon X, Apple Silicon) para flujos de trabajo de desarrollo.</li>
+      <li>Neurocopywriting y estrategias de contenido orientadas a resultados medibles.</li>
+    </ul>
+
     <h3>Términos que uso</h3>
     <dl>
       <dt>Neurocopywriting</dt>
@@ -227,20 +250,21 @@
     </canvas>
 
     <!-- ============================== -->
-    <!-- 8. CONTACTO                    -->
+    <!-- 8. CONTACTO Y REDES            -->
     <!-- ============================== -->
     <!-- CONCEPTO: entidad &nbsp; para separación -->
-    <p><strong>Contacto:</strong>&nbsp;synnergydev@gmail.com</p>
+    <p><strong>Contacto:</strong>&nbsp;<a href="mailto:synnergydev@gmail.com">synnergydev@gmail.com</a></p>
 
     <!-- ============================== -->
     <!-- 9. LINKS A REDES               -->
     <!-- ============================== -->
     <!-- CONCEPTO: rutas absolutas en href -->
-    <h3>Encuéntrame en</h3>
+    <h3>Encuéntrame en Redes Sociales</h3>
     <ul>
-      <li><a href="https://github.com/SynnergyDev47" title="Perfil de Aurelio Crespo en GitHub">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/aurelio-crespo/"title="Perfil de Aurelio Crespo en LinkedIn">LinkedIn</a></li>
-      <li><a href="https://www.instagram.com/synnergy_dev/" title="Perfil de Aurelio Crespo en Instagram">Instagram</a></li>
+      <li><a href="https://github.com/SynnergyDev47" target="_blank" rel="noopener noreferrer" title="Perfil de Aurelio Crespo en GitHub">GitHub (@SynnergyDev47)</a></li>
+      <li><a href="https://www.linkedin.com/in/aurelio-crespo/" target="_blank" rel="noopener noreferrer" title="Perfil de Aurelio Crespo en LinkedIn">LinkedIn (Aurelio Crespo)</a></li>
+      <li><a href="https://www.instagram.com/synnergy_dev/" target="_blank" rel="noopener noreferrer" title="Perfil de Aurelio Crespo en Instagram">Instagram (@synnergy_dev)</a></li>
+      <li><a href="https://synnergydev47.github.io/SynnergyDev47/es/" target="_blank" rel="noopener noreferrer" title="Sitio Web de Synnergy Lab">Synnergy Lab</a></li>
     </ul>
 
     <!-- ============================== -->
@@ -248,7 +272,7 @@
     <!-- ============================== -->
 
     <!-- CONCEPTO: <embed> con recurso PDF — portfolio de ejemplo -->
-    <h3>Portfolio</h3>
+    <h3>Portfolio en Documento</h3>
     <p>Vista previa del portfolio en formato PDF:</p>
     <embed type="application/pdf" src="media/portfolio-aurelio.pdf"
       width="600" height="400"
@@ -273,8 +297,8 @@
     <h3>Actualmente trabajando en:</h3>
     <ul>
       <li>Synnergy Lab como agencia de marketing digital y desarrollo</li>
-      <li>Serie de ebooks sobre marketing digital</li>
-      <li>Plataforma de matching influencers-marcas</li>
+      <li>Serie de ebooks sobre marketing digital (disponibles en la <a href="tienda/index.html">Tienda</a>)</li>
+      <li>Plataforma de matching influencers-marcas (ver en <a href="portafolio/index.html">Portafolio</a>)</li>
       <li>Plataforma de reclutamiento de artistas musicales</li>
     </ul>
   </aside>
@@ -283,8 +307,19 @@
   <!-- CONCEPTO: role contentinfo en footer; se documenta por compatibilidad con lectores antiguos -->
   <footer role="contentinfo">
     <hr>
+    <nav aria-label="Navegación del pie de página">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="articles/index.html">Blog</a></li>
+        <li><a href="tienda/index.html">Tienda</a></li>
+        <li><a href="about.html">Sobre mí / CV</a></li>
+        <li><a href="servicios/index.html">Servicios</a></li>
+        <li><a href="portafolio/index.html">Portafolio</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
     <!-- CONCEPTO: entidad &amp; en footer -->
-    <p>© 2026 Aurelio Crespo &amp; Synnergy Lab</p>
+    <p>© 2026 Aurelio Crespo &amp; Synnergy Lab. Todos los derechos reservados.</p>
   </footer>
 </body>
 

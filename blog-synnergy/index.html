@@ -70,10 +70,13 @@
         </svg>
         <a href="index.html">Inicio</a>
       </li>
+      <li><a href="articles/index.html" title="Ir al catálogo de artículos del blog">Blog</a></li>
+      <li><a href="tienda/index.html" title="Ir a la tienda y productos digitales">Tienda / Productos</a></li>
       <!-- CONCEPTO: atributo title en enlace -->
-      <li><a href="about.html" title="Ir a la página sobre mí">Sobre mí</a></li>
-      <li><a href="articles/arm-arquitectura.html">Artículos</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="about.html" title="Ir a la página sobre mí y CV">Sobre mí / CV</a></li>
+      <li><a href="servicios/index.html" title="Ir a la página de servicios profesionales">Servicios</a></li>
+      <li><a href="portafolio/index.html" title="Ir al portafolio de proyectos">Portafolio</a></li>
+      <li><a href="contacto.html" title="Ir a la página de contacto">Contacto</a></li>
     </ul>
   </nav>
   <!-- CONCEPTO: role main en main; se documenta por compatibilidad con lectores antiguos -->
@@ -81,6 +84,7 @@
     <!-- CONCEPTO: entidades HTML -->
     <p>Este blog cubre HTML, CSS &amp; JavaScript. Aprende a usar etiquetas
       como &lt;head&gt;, &lt;body&gt; y más. Separador:&nbsp;|</p>
+
     <!-- CONCEPTO: section agrupando contenido temático -->
     <!-- CONCEPTO: aria-labelledby en sección -->
     <section aria-labelledby="articulos-recientes">
@@ -95,7 +99,58 @@
           <a href="articles/arm-arquitectura.html">ARM vs x86: el chip que cambió mi forma de trabajar</a>
         </li>
         <li data-category="Marketing" data-date="2026-07-15">
-          <a href="#">Neurocopywriting: cómo escribir para vender sin parecer vendedor</a>
+          <a href="articles/index.html#marketing">Neurocopywriting: cómo escribir para vender sin parecer vendedor</a>
+        </li>
+      </ul>
+      <p><a href="articles/index.html">Ver todos los artículos en el archivo del blog &rarr;</a></p>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- SECCIÓN: SUSCRIPCIÓN A NEWSLETTER (Fase HTML Estructurado) -->
+    <!-- ====================================================== -->
+    <section aria-labelledby="newsletter-titulo">
+      <h2 id="newsletter-titulo">Boletín informativo / Newsletter</h2>
+      <p>Suscríbete para recibir análisis sobre software, inteligencia artificial, hardware ARM y estrategias de marketing digital directamente en tu bandeja de entrada.</p>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Formulario de suscripción</legend>
+          <p>
+            <label for="newsletter-nombre">Nombre de usuario o alias:</label>
+            <input type="text" id="newsletter-nombre" name="nombre" placeholder="Ej. Aurelio" required>
+          </p>
+          <p>
+            <label for="newsletter-email">Correo electrónico:</label>
+            <input type="email" id="newsletter-email" name="email" placeholder="tu-correo@ejemplo.com" required autocomplete="email">
+          </p>
+          <p>
+            <button type="submit">Suscribirme al boletín</button>
+          </p>
+          <p><small>Prometemos no enviar spam. Puedes desuscribirte en cualquier momento.</small></p>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- SECCIÓN: ENLACES A REDES SOCIALES                     -->
+    <!-- ====================================================== -->
+    <section aria-labelledby="redes-sociales-titulo">
+      <h2 id="redes-sociales-titulo">Conecta en Redes Sociales</h2>
+      <p>Sigue mis proyectos y publicaciones en las siguientes plataformas:</p>
+      <ul>
+        <li>
+          <a href="https://github.com/SynnergyDev47" target="_blank" rel="noopener noreferrer" title="Perfil de Aurelio Crespo en GitHub">GitHub (@SynnergyDev47)</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/aurelio-crespo/" target="_blank" rel="noopener noreferrer" title="Perfil profesional de Aurelio Crespo en LinkedIn">LinkedIn (Aurelio Crespo)</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/synnergy_dev/" target="_blank" rel="noopener noreferrer" title="Cuenta de Instagram de Synnergy Dev">Instagram (@synnergy_dev)</a>
+        </li>
+        <li>
+          <a href="https://synnergydev47.github.io/SynnergyDev47/es/" target="_blank" rel="noopener noreferrer" title="Sitio oficial de Synnergy Lab">Agencia Synnergy Lab</a>
+        </li>
+        <li>
+          <a href="mailto:synnergydev@gmail.com" title="Enviar un correo electrónico a Aurelio Crespo">Correo Electrónico (synnergydev@gmail.com)</a>
         </li>
       </ul>
     </section>
@@ -103,7 +158,18 @@
   <!-- CONCEPTO: role contentinfo en footer; se documenta por compatibilidad con lectores antiguos -->
   <footer role="contentinfo">
     <hr>
-    <p>© 2026 Aurelio Crespo · Synnergy Lab</p>
+    <nav aria-label="Navegación del pie de página">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="articles/index.html">Blog</a></li>
+        <li><a href="tienda/index.html">Tienda</a></li>
+        <li><a href="about.html">Sobre mí / CV</a></li>
+        <li><a href="servicios/index.html">Servicios</a></li>
+        <li><a href="portafolio/index.html">Portafolio</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <p>© 2026 Aurelio Crespo · Synnergy Lab. Todos los derechos reservados.</p>
   </footer>
 </body>
 
